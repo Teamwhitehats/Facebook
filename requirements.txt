@@ -1,3 +1,2 @@
 fake-useragent
-threading
 bs4
