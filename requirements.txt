@@ -1,3 +1,4 @@
 requests
 fake-useragent
 bs4
+rich
